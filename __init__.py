@@ -220,7 +220,7 @@ class SMPLX_OT_ExportAnimation(Operator, ExportHelper):
                 'betas': betas,
                 'root_orient': root_orient,
                 'trans': trans,
-                'poses': poses,
+                'poses': np.concatenate([root_orient, poses], axis=1),
                 'pose_body': pose_body,
                 'pose_hand': pose_hand,
                 'pose_jaw': pose_face,
